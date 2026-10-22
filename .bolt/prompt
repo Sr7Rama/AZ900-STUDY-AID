@@ -1,3 +1,54 @@
+Act as a Principal Frontend Engineer and UX Architect. Build a fully responsive, production-ready React application using Tailwind CSS and Lucide Icons for an "Unofficial Microsoft Azure Fundamentals (AZ-900) Exam Prep Tool".
+
+Implement the core architecture and features based on the following breakdown:
+
+1. GLOBAL HEADER & COMPLIANCE BANNER
+   - Title: "CloudPrep: AZ-900 Exam Assistant" with a modern cloud/shield icon.
+   - Disclaimer Badge: A prominent, permanent badge stating "Unofficial Community Practice Tool — Not affiliated with Microsoft".
+   - Navigation Bar: Tabs for "Dashboard", "Practice Quiz", "Flashcard Coach", and "Syllabus Guide".
+   - Global Stats Header: Display current streak, total questions answered, and overall readiness score.
+
+2. DASHBOARD VIEW (Readiness Tracker)
+   - Overall Readiness Score Meter: A circular or linear progress gauge calculated dynamically based on historical practice accuracy.
+   - Status Indicator: Dynamic status badges ("Needs Practice" for <60%, "On Track" for 60-80%, "Exam Ready" for >80%).
+   - Domain Breakdown Cards (Covering official AZ-900 weightings):
+     * Describe Cloud Concepts (25–30% weight)
+     * Describe Azure Architecture and Services (35–40% weight)
+     * Describe Azure Management and Governance (30–35% weight)
+   - Weak Area Quick-Action Button: "Start Smart Practice Session" targeting low-accuracy topics.
+
+3. PRACTICE QUIZ MODULE (Smart Quiz Builder)
+   - Topic Filtering: Filter by "All Domains", "Cloud Concepts", "Architecture & Services", or "Governance".
+   - Quiz Interface:
+     * Card layout displaying question text, domain tag, and difficulty indicator.
+     * 4 single-choice option buttons with smooth hover and selected states.
+     * Progress tracking bar (e.g., "Question 4 of 10").
+   - Instant Feedback System:
+     * Upon clicking an option, disable inputs and show immediate color coding (Green = Correct, Red = Incorrect).
+     * Render an "Explanation Box" detailing:
+       - Why the correct answer is right.
+       - "Key Exam Tip" highlighting core concepts.
+   - Question Bookmarking: Toggle button to flag difficult questions for later review.
+
+4. FLASHCARD COACH MODULE (Memory & Revision)
+   - Interactive Flip Cards: Click/tap to flip between the front (Azure Service/Term) and back (Definition & Primary Use Case).
+   - Self-Assessment Controls: "Got It" (Green) vs "Need Review" (Red) buttons on the back of each card.
+   - Filter Toggle: Allow users to switch between "All Cards" and "Flagged for Review".
+
+5. STATE PERSISTENCE & DATA STORAGE
+   - Implement custom hooks using browser `localStorage` to persist:
+     * User quiz attempts and accuracy scores per domain.
+     * Bookmarked questions.
+     * Flashcards marked as "Need Review".
+   - Include a "Reset Progress" button in the footer for easy testing and reset.
+
+6. SAMPLE DATA GENERATION
+   - Seed the app with at least 6 original, high-quality AZ-900 style practice questions and 6 flashcards across all three domains (ensuring no copyrighted exam text is used).
+
+7. UI VIBES & STYLING
+   - Modern dark/light mode aesthetic using slate/indigo/emerald palette.
+   - Smooth transition animations for card flips, tab switches, and option highlights.
+
 For all designs I ask you to make, have them be beautiful, not cookie cutter. Make webpages that are fully featured and worthy for production.
 
 By default, this template supports JSX syntax with Tailwind CSS classes, React hooks, and Lucide React for icons. Do not install other packages for UI themes, icons, etc unless absolutely necessary or I request them.
